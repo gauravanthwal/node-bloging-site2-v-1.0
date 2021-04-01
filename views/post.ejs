@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        body{
+            background-color: #c1e0d1;
+        }
+        .postTitle, .postBody{
+            font-family: 'Roboto', sans-serif;
+        }
+        .post{
+            margin-right: 100px;
+        }
+        @media (max-width: 600px) {
+            .post{
+                margin-right: 0px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <%- include('./nav') %>
+    
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="post mt-3 px-3">
+                <h1 class="postTitle text-center" style="color: #4a3933">
+                    <%= post.title %>
+                </h1>
+                <div class="postBody mt-4">
+                    <p style="font-size: 1.1rem;  word-spacing: 6px; color: #16130e; font-weight: 400;">
+                         <%= post.body %>
+                    </p>
+                </div>
+                <p class="ms-3 text-muted" style="letter-spacing: 1px;">--- <u><i><%= author%></i></u> ---</p>
+            </div>
+
+        </div>
+        <div class="col-md-3 mt-3" style="background-color: #e2e2e2;">
+           <p>Related Links</p>
+        </div>
+    </div>
+</div>
+   
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="container-fluid reg">
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+    view source code on <strong><a class="text-success" target="_blank" href="https://github.com/gauravanthwal/node-Bloging-site2-v-1.0"> Github</a></strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 mt-5 p-5" style="border: 1px solid rgb(235, 235, 235);background-color: #f1f1f1;">
+            <h2 class="text-center mb-4">Login</h2>
+            <% if(errorMessage) {  %>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <%= errorMessage %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <% } %>
+            <form action="/user/login" method="post">
+                <input name="email" style="border-radius: 0px ;" type="email" class="form-control mb-4" placeholder="E-mail">
+                <input name="password" style="border-radius: 0px ;" type="password" class="form-control mb-4" placeholder="Password">
+                <button style="border-radius: 0px; background-color: #22243a;border: none;padding: 8px 20px;" class="btn btn-primary" type="submit">Login</button>
+            </form>
+            <p><small>Don't have an Account?</small> <a href="/user/register">Register</a></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+  background-color: #c1ecd7;
+  font-family: 'Roboto', sans-serif;
+}
+.allPost {
+  background-color: rgb(227, 241, 231);
+  padding: 15px 30px;
+  margin-right: 125px;
+  margin-left: 25px;
+  box-shadow: 3px 3px 11px -4px rgb(31, 30, 30);
+  border-radius: 5px;
+}
+.title {
+  color: #393232;
+  text-align: center;
+  font-weight: 800;
+}
+.paragraph{
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.post {
+  background-color: red;
+}
+.login-box {
+  margin-top: 20px;
+  padding: 10px 10px;
+}
+.head4 {
+  text-align: center;
+  color: rgb(66, 66, 66);
+}
+.btnBoth {
+  display: block;
+  margin: 30px 0;
+  text-align: center;
+}
+.btn0 {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.register {
+  background-color: #ec4646;
+}
+.register:hover {
+  background-color: #ec5a5a;
+  color: #fff;
+}
+
+.login {
+  background-color: #0f1123;
+}
+.login:hover {
+  background-color: #22243a;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .allPost {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="container reg">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 mt-5 " style="border: 1px solid rgb(235, 235, 235);background-color: #f1f1f1;">
+            <h2 class="text-center mb-4">Sign Up</h2>
+            <% if(errorMessage) { %>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <%= errorMessage %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <% } %>
+            <form action="/user/register" method="post">
+                <input name="name" style="border-radius: 0px ;" type="text" class="form-control mb-4" placeholder="Username">
+                <input name="email" style="border-radius: 0px ;" type="email" class="form-control mb-4" placeholder="E-mail">
+                <input name="password" style="border-radius: 0px ;" type="password" min="4" class="form-control mb-4" placeholder="Password">
+                <button style="border-radius: 0px; background-color: #ec4646;border: none;padding: 8px 20px;" class="btn btn-primary" type="submit">Register</button>
+            </form>
+            <p><small>Already have an Account?</small> <a href="/user/login">Login</a></p>
+        </div>
+    </div>
+</div>

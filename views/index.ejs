@@ -1,0 +1,24 @@
+<%- include('./nav') %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 login-box">
+           <h4 class="text-center">Welcome, <span class="fw-bold text-success"><%= userName %></span> </h4>
+            <%- include('./partials/carosoul') %>
+        </div>
+        <div class="col-md-9">
+            <div class="d-flex flex-column-reverse bd-highlight mb-3"></div>
+                <% posts.forEach(post => { %>
+                    
+                <div class="allPost mt-4 mb-4">
+                    <h2 class="title mb-4"><%= post.title %> </h2>
+                    <div class="body"> <p class="paragraph"> <%= post.body.substring(0,200) +'.....' %> </p>
+                    <a href="/post/<%= post._id%>"><i> Read more</i></a>
+                    <p class="text-muted float-end" style="font-size: .9rem;"><i> <%= post.Date.toDateString() %></i></p>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+        </div>
+        
+    </div>
+</div>
